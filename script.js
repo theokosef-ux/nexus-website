@@ -1,7 +1,19 @@
-document.getElementById("year").textContent = new Date().getFullYear();
+const year = document.getElementById("year");
 
-document.getElementById("productsButton").addEventListener("click", () => {
-  document.getElementById("products").scrollIntoView({
-    behavior: "smooth"
+if (year) {
+  year.textContent = new Date().getFullYear();
+}
+
+const productsButton = document.getElementById("productsButton");
+
+if (productsButton) {
+  productsButton.addEventListener("click", () => {
+    const products = document.getElementById("products");
+
+    if (products) {
+      products.scrollIntoView({
+        behavior: "smooth"
+      });
+    }
   });
-});
+}
